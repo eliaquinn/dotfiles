@@ -63,3 +63,6 @@ keymap.set("v", ">", ">gv", { desc = "Ident right" })
 
 -- Keep last yanked when pasting
 keymap.set("v", "p", '"_dP', { desc = "keep de last yanked when pasting" })
+
+-- gitsigns blame
+keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame<CR>", { desc = "Go to git blame" })

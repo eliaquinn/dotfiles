@@ -31,6 +31,7 @@ setopt hist_verify
 alias vim=nvim
 alias v=vim
 alias vi=v
+alias sb=supabase
 
 # History Search
 autoload -Uz history-search-end
