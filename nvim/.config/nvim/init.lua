@@ -1,11 +1,11 @@
-require("saad.core")
-require("saad.lazy")
+require("eliaquinn.core")
+require("eliaquinn.lazy")
 
-local lspconfig = require("lspconfig")
-
-lspconfig.tsserver.setup({
-	capabilities = require("cmp_nvim_lsp").default_capabilities(),
-})
+-- local lspconfig = require("lspconfig")
+--
+-- lspconfig.tsserver.setup({
+-- 	capabilities = require("cmp_nvim_lsp").default_capabilities(),
+-- })
 
 -- Exibir notificações quando a gravação de macro começar e terminar, com o nome do registrador
 vim.api.nvim_create_autocmd("RecordingEnter", {

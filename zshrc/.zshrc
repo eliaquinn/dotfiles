@@ -4,7 +4,7 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="jonathan"
 plugins=(
 	git
 	zsh-syntax-highlighting
@@ -28,10 +28,12 @@ setopt hist_verify
 
 
 ##### Alias
+alias cls="clear"
 alias vim=nvim
 alias v=vim
 alias vi=v
 alias sb=supabase
+alias connect="basti connect $AWS_PROFILE"
 
 # History Search
 autoload -Uz history-search-end
