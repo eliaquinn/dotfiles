@@ -41,7 +41,7 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 # VI Mode
 autoload edit-command-line && zle -N edit-command-line
-bindkey "^v" edit-command-line
+bindkey '^[v' edit-command-line
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
