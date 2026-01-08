@@ -5,6 +5,11 @@ local keymap = vim.keymap -- for conciseness
 
 ---------------------
 -- General Keymaps -------------------
+-- keymap.set("n", "<leader>le", "ys", { desc = "Surround para envolver texto" })
+
+-- show error/warning
+keymap.set("n", "<leader>ew", vim.diagnostic.open_float, { desc = "Show Error/Warning" })
+keymap.set("n", "<leader>el", vim.diagnostic.setloclist, { desc = "Show All erros/warnings" })
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
