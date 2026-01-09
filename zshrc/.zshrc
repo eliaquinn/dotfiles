@@ -88,3 +88,5 @@ export NVM_DIR="$HOME/.nvm"
 
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
