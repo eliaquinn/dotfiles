@@ -1,13 +1,11 @@
--- esse plugin tem o intuito de colocar a aba para indicar o arquivo
--- return {
--- 	"akinsho/bufferline.nvim",
--- 	dependencies = { "nvim-tree/nvim-web-devicons" },
--- 	version = "*",
--- 	opts = {
--- 		options = {
--- 			mode = "tabs",
--- 			separator_style = "slant",
--- 		},
--- 	},
--- }
-return {}
+return {
+  "akinsho/bufferline.nvim",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  version = "*",
+  opts = {
+    options = {
+      mode = "tabs",
+      separator_style = "slant",
+    },
+  },
+}

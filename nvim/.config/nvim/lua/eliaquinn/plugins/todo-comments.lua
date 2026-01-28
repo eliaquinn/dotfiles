@@ -1,11 +1,3 @@
--- highlight definidos
--- PERF fully optimised
--- HACK hmm, this looks a bit funky
--- TODO what else?
--- NOTE adding a note
--- FIX this needs fixing
--- WARNING ???
-
 return {
 	"folke/todo-comments.nvim",
 	event = { "BufReadPre", "BufNewFile" },

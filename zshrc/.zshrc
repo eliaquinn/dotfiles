@@ -33,6 +33,7 @@ alias vim=nvim
 alias v=vim
 alias vi=v
 alias sb=supabase
+alias py=python3
 alias connect="basti connect $AWS_PROFILE"
 
 # History Search
@@ -90,3 +91,4 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"

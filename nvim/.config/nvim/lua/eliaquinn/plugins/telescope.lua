@@ -3,7 +3,6 @@ return {
 	-- branch = "0.1.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		-- A correção está aqui: 'build = "make"' compila a extensão nativa.
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-tree/nvim-web-devicons",
 		"folke/todo-comments.nvim",
@@ -17,8 +16,8 @@ return {
 				path_display = { "smart" },
 				mappings = {
 					i = {
-						["<C-k>"] = actions.move_selection_previous, -- move para o resultado anterior
-						["<C-j>"] = actions.move_selection_next, -- move para o próximo resultado
+						["<C-k>"] = actions.move_selection_previous, -- move to prev result
+						["<C-j>"] = actions.move_selection_next, -- move to next result
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 					},
 				},
@@ -30,28 +29,23 @@ return {
 					no_ignore = true,
 				},
 				live_grep = {
-					-- Adicionado para consistência com find_files
 					file_ignore_patterns = { ".git", ".venv" },
 					additional_args = function(_)
 						return { "--hidden" }
 					end,
 				},
-			},
-			extensions = {
-				["ui-select"] = {
-					require("telescope.themes").get_dropdown(),
+				extensions = {
+					["ui-select"] = {
+						require("telescope.themes").get_dropdown(),
+					},
 				},
 			},
 		})
 
-		-- Carrega as extensões após o setup
 		telescope.load_extension("fzf")
-		-- Se você usa o plugin 'noice.nvim', esta linha está correta.
-		-- Se não, você pode removê-la para evitar um erro de "extensão não encontrada".
 		telescope.load_extension("noice")
-
-		-- Define os atalhos de teclado
-		local keymap = vim.keymap -- para concisão
+		-- set keymaps
+		local keymap = vim.keymap -- for conciseness
 
 		keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
 		keymap.set("n", "<leader>fr", "<cmd>Telescope registers<cr>", { desc = "Fuzzy find registers" })

@@ -1,6 +1,9 @@
 return {
 	"tpope/vim-fugitive",
 	cmd = {
-		"G", "Git", "Glog", "Gclog"
-	}
+		"G",
+		"Git",
+		"Glog",
+		"Gclog",
+	},
 }
