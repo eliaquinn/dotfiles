@@ -41,6 +41,8 @@ return {
 				"eslint",
 				"taplo",
 				"yamlls",
+				-- "ts_ls",
+				"eslint",
 			},
 			automatic_installation = true,
 		})

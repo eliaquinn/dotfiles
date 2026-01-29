@@ -34,10 +34,10 @@ return {
 			vim.diagnostic.config({
 				signs = {
 					text = {
-						[vim.diagnostic.severity.ERROR] = "",
-						[vim.diagnostic.severity.WARN] = "",
-						[vim.diagnostic.severity.HINT] = "󰠠 ",
-						[vim.diagnostic.severity.INFO] = "",
+						[vim.diagnostic.severity.ERROR] = "",
+						[vim.diagnostic.severity.WARN] = "",
+						[vim.diagnostic.severity.HINT] = "󰰀",
+						[vim.diagnostic.severity.INFO] = "",
 					},
 				},
 			})
@@ -77,20 +77,6 @@ return {
 					root_markers = { ".terraform", "*.tf", ".git" },
 					capabilities = capabilities,
 					on_attach = on_attach,
-				}
-
-				-- Jinja LSP
-				vim.lsp.config.jinja_lsp = {
-					cmd = { "jinja-lsp" },
-					filetypes = { "jinja2", "jinja" },
-					root_markers = { ".git", "requirements.txt", "pyproject.toml", "setup.py" },
-					capabilities = capabilities,
-					on_attach = on_attach,
-					settings = {
-						templates = "./templates",
-						backend = { "./src", "./app" },
-						lang = "python",
-					},
 				}
 
 				-- YAML LSP
@@ -189,6 +175,21 @@ return {
 							showTodos = true,
 						},
 					},
+				}
+
+				-- ESLint LSP (diagnósticos + fix)
+				vim.lsp.config.eslint = {
+					capabilities = capabilities,
+					on_attach = function(client, bufnr)
+						on_attach(client, bufnr)
+
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							buffer = bufnr,
+							callback = function()
+								pcall(vim.cmd, "EslintFixAll")
+							end,
+						})
+					end,
 				}
 			end)
 		else
