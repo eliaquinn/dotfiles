@@ -92,3 +92,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# opencode
+export PATH=/home/eliaquinn/.opencode/bin:$PATH
