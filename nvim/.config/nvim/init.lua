@@ -1,6 +1,14 @@
 require("eliaquinn.core")
 require("eliaquinn.lazy")
 
+local ok, dbs = pcall(require, "local.dbs")
+
+if ok then
+	vim.g.dbs = dbs
+else
+	vim.g.dbs = vim.g.dbs or {}
+end
+
 -- Exibir notificações quando a gravação de macro começar e terminar, com o nome do registrador
 vim.api.nvim_create_autocmd("RecordingEnter", {
 	callback = function()

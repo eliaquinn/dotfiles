@@ -34,6 +34,7 @@ keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
 keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "diagnostic prev " })
 keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "diagnostic next " })
 keymap.set("n", "<leader>D", vim.diagnostic.open_float, { desc = "Open Float Diagnostic" })
+keymap.set("n", "fF", "<cmd>:NvimTreeFindFile<CR>", { desc = "Find file in nvim-treee." })
 
 -- Adicionando seus keybinds personalizados
 keymap.set("n", "<leader>ld", vim.lsp.buf.type_definition, { desc = "LSP: Type Definition" })
@@ -64,3 +65,6 @@ keymap.set("v", ">", ">gv", { desc = "Ident right" })
 
 -- Keep last yanked when pasting
 keymap.set("v", "p", '"_dP', { desc = "keep de last yanked when pasting" })
+
+-- DADBODUI
+keymap.set("n", "<leader>db", "<cmd>DBUI<CR>", { desc = "Open database tab" })
