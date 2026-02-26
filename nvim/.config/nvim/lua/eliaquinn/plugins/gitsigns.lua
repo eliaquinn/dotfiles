@@ -9,5 +9,6 @@ return {
 			topdelete = { text = "-" },
 			chengedelete = { text = "~" },
 		},
+		current_line_blame = true,
 	},
 }

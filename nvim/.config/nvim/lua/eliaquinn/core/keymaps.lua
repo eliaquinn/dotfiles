@@ -16,6 +16,12 @@ keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
+-- git signs keymaps
+keymap.set("n", "<leader>gh", "<cmd>:Gitsigns preview_hunk<CR>", { desc = "Show changes made" })
+keymap.set("n", "<leader>gl", "<cmd>:Gitsigns preview_hunk_inline<CR>", { desc = "Show changes inline" })
+keymap.set("n", "<leader>gf", "<cmd>:Gitsigns setqflist<CR>", { desc = "Toggle to set the quickfix" })
+keymap.set("n", "<leader>gr", "<cmd>:Gitsigns reset_hunk<CR>", { desc = "Remove changes inline" })
+
 -- center line on C-d
 keymap.set("n", "<C-d>", "<C-d>zz", { desc = "center the cursor" })
 keymap.set("n", "<C-u>", "<C-u>zz", { desc = "center the cursor" })
