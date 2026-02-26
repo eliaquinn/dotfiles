@@ -33,6 +33,7 @@ alias vim=nvim
 alias v=vim
 alias vi=v
 alias sb=supabase
+alias py=python3
 alias connect="basti connect $AWS_PROFILE"
 
 # History Search
@@ -41,7 +42,7 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 # VI Mode
 autoload edit-command-line && zle -N edit-command-line
-bindkey "^v" edit-command-line
+bindkey '^[v' edit-command-line
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
@@ -88,3 +89,9 @@ export NVM_DIR="$HOME/.nvm"
 
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# opencode
+export PATH=/home/eliaquinn/.opencode/bin:$PATH

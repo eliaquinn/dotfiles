@@ -11,6 +11,7 @@ keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
@@ -27,17 +28,18 @@ keymap.set("n", "<leader>nm", ":Noice<CR>", { desc = "View noice messages" })
 
 -- Mapeamentos básicos de LSP
 keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "go to definition" })
-keymap.set("n", "K", vim.lsp.buf.hover, { desc = "go to definition" })
-keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "go to definition" })
-keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "go to definition" })
-keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "go to definition" })
-keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "go to definition" })
-keymap.set("n", "<leader>D", vim.diagnostic.open_float, { desc = "go to definition" })
+keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Mostra documentação" })
+keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Smart rename" })
+keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
+keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "diagnostic prev " })
+keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "diagnostic next " })
+keymap.set("n", "<leader>D", vim.diagnostic.open_float, { desc = "Open Float Diagnostic" })
+keymap.set("n", "fF", "<cmd>:NvimTreeFindFile<CR>", { desc = "Find file in nvim-treee." })
 
 -- Adicionando seus keybinds personalizados
-keymap.set("n", "<leader>ld", vim.lsp.buf.type_definition, { desc = "go to definition" })
-keymap.set("n", "<leader>li", vim.lsp.buf.implementation, { desc = "go to definition" })
-keymap.set("n", "<leader>ls", vim.lsp.buf.signature_help, { desc = "go to definition" })
+keymap.set("n", "<leader>ld", vim.lsp.buf.type_definition, { desc = "LSP: Type Definition" })
+keymap.set("n", "<leader>li", vim.lsp.buf.implementation, { desc = "LSP: Implementation" })
+keymap.set("n", "<leader>ls", vim.lsp.buf.signature_help, { desc = "LSP: Signature Help" })
 keymap.set("n", "<leader>lwa", vim.lsp.buf.add_workspace_folder, { desc = "go to definition" })
 keymap.set("n", "<leader>lwr", vim.lsp.buf.remove_workspace_folder, { desc = "go to definition" })
 -- increment/decrement numbers
@@ -64,5 +66,5 @@ keymap.set("v", ">", ">gv", { desc = "Ident right" })
 -- Keep last yanked when pasting
 keymap.set("v", "p", '"_dP', { desc = "keep de last yanked when pasting" })
 
--- gitsigns blame
-keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame<CR>", { desc = "Go to git blame" })
+-- DADBODUI
+keymap.set("n", "<leader>db", "<cmd>DBUI<CR>", { desc = "Open database tab" })
