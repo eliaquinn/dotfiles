@@ -38,8 +38,33 @@ return {
 			end,
 			desc = "Notification History",
 		},
-		-- { "<leader>/",  function() Snacks.picker.grep() end,           desc = "Grep" },
-		-- { "<leader>e",  function() Snacks.explorer() end,              desc = "File Explorer" },
-		-- { "<leader>sw", function() Snacks.picker.grep_word() end,      desc = "Visual selection or word", mode = { "n", "x" } },
+
+		-- 	function()
+		-- 		Snacks.picker.git_branches()
+		-- 	end,
+		-- 	desc = "Git Branches",
+		-- },
+		-- {
+		-- 	"<leader>/",
+		-- 	function()
+		-- 		Snacks.picker.grep()
+		-- 	end,
+		-- 	desc = "Grep",
+		-- },
+		-- {
+		-- 	"<leader>e",
+		-- 	function()
+		-- 		Snacks.explorer()
+		-- 	end,
+		-- 	desc = "File Explorer",
+		-- },
+		-- {
+		-- 	"<leader>sw",
+		-- 	function()
+		-- 		Snacks.picker.grep_word()
+		-- 	end,
+		-- 	desc = "Visual selection or word",
+		-- 	mode = { "n", "x" },
+		-- },
 	},
 }
